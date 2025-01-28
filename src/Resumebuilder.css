@@ -1,0 +1,220 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px; /* Adjust gap */
+}
+
+/* Form Section Styling */
+.form-section {
+    width: 40%;
+    padding: 20px;
+    background-color: #ffffff; /* White background for form section */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-section h2 {
+    font-size: 26px;
+    color: #283593;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold; /* Make labels bold */
+    color: #333;
+}
+
+input, textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #283593;
+    outline: none;
+}
+
+button {
+    background-image: linear-gradient(to right, #283593, #1e2a8a); /* Gradient button */
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1e2a8a;
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+button[type="button"] {
+    margin-top: 10px; 
+}
+
+/* Profile Picture Preview */
+.left-panel .photo {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 4px solid #ffffff; /* Thicker border for profile picture */
+}
+
+/* Resume Preview Section Styling */
+.resume {
+    width: 60%;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.left-panel {
+    background-color: #283593; /* Darker for contrast */
+    color: #ffffff;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-panel h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffffff; /* Thicker border */
+    padding-bottom: 5px;
+}
+
+.left-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-panel ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.right-panel {
+    padding: 20px;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.right-panel h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #283593;
+}
+
+.right-panel h2 {
+    margin: 5px 0 20px;
+    font-size: 18px;
+    color: #6a6a6a;
+}
+
+.right-panel h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #0a0b0f;
+    border-bottom: 2px solid #283593;
+    padding-bottom: 5px;
+}
+
+.right-panel p, .right-panel ul li {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+.right-panel ul {
+    list-style: disc inside;
+}
+
+.left-panel .photo {
+    width: 100px;            /* Width of the photo */
+    height: 100px;           /* Height of the photo */
+    background-color: #ddd;  /* Placeholder color */
+    background-size: cover;  /* Cover to make sure the image fills the div */
+    background-position: center; /* Center the image */
+    border-radius: 50%;      /* Circular image */
+    margin: 0 auto;          /* Center the image */
+    border: 2px solid #fff;  /* Optional: border around the image */
+}
+
+@media print {
+    body {
+        background-color: white;
+        margin: 0;
+    }
+    
+    .resume {
+        box-shadow: none;
+        margin: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .resume {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right-panel h1 {
+        font-size: 24px;
+    }
+
+    .right-panel h2 {
+        font-size: 16px;
+    }
+
+    .right-panel h3 {
+        font-size: 18px;
+    }
+
+    input, textarea {
+        font-size: 16px;
+    }
+}
