@@ -4,22 +4,22 @@ import './Resumebuilder.css';
 
 const Resumebuilder = () => {
     const [formData, setFormData] = useState({
-        name: 'John Doe',
+        name: 'Sunil shah',
         jobTitle: 'Software Engineer',
-        email: 'john.doe@example.com',
+        email: 'shahsunil@example.com',
         phone: '123-456-7890',
-        address: 'New York, NY, USA',
-        linkedIn: 'https://linkedin.com/in/johndoe',
+        address: 'Madhya preadesh, BPl, iND',
+        linkedIn: 'https://linkedin.com/in/s',
         github: 'https://github.com/johndoe',
-        certifications: 'Certified Java Developer | Oracle | 2021',
+        certifications: 'Certified Python Developer |Cybrom | 2024',
         languages: 'English | Fluent',
         about: 'Experienced software engineer with expertise...',
         skills: ['JavaScript'],
-        education: 'B.Sc. Computer Science | XYZ University | 2016-2020',
-        workExperience: 'Software Engineer | TechCorp | 2020-Present | Developed web apps'
+        education: 'B.Tch. Computer Science | XYZ University | 2020-2024',
+        workExperience: 'Software Engineer | Numetry| 2025-Present | Full stack developer'
     });
 
-    const [profileImage, setProfileImage] = useState(null); // State to hold the profile image
+    const [profileImage, setProfileImage] = useState(null); 
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -31,7 +31,7 @@ const Resumebuilder = () => {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                setProfileImage(reader.result); // Update image state with the uploaded image
+                setProfileImage(reader.result); 
             };
             reader.readAsDataURL(file);
         }
@@ -47,14 +47,12 @@ const Resumebuilder = () => {
     const downloadResume = () => {
         const doc = new jsPDF();
 
-        // Add user details to PDF
         doc.text(formData.name, 10, 10);
         doc.text(formData.jobTitle, 10, 20);
         doc.text(formData.email, 10, 30);
         doc.text(formData.phone, 10, 40);
         doc.text(formData.address, 10, 50);
-        // Optionally include image when downloading
-        // doc.addImage(profileImage, 'PNG', 15, 15, 40, 40); 
+        
         doc.save('resume.pdf');
     };
 
